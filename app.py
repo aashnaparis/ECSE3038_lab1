@@ -6,12 +6,12 @@ def parallel(resistance):
     for x in resistance:
         total_resistance += 1/x
         x += 1
-    return total_resistance
+    actual_tot = total_resistance ** -1
+    return actual_tot
 
 temp = parallel(resistors)
-actual_tot = temp ** -1
 
-print(f"{actual_tot:.3f} ohms")
+print(f"{temp:.3f} ohms")
 
 def potential_divider(v_supply, resistors):
     r_tot = 0
@@ -25,7 +25,6 @@ def potential_divider(v_supply, resistors):
         v_drop = tot_current * x
         print(f"{v_drop:.2f}v")
         
-
 potential_divider(9, [3000, 1000])
 
 def temperature_check(temperature, cel_fah):
