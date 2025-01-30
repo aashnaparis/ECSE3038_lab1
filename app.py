@@ -28,4 +28,21 @@ def potential_divider(v_supply, resistors):
 
 potential_divider(9, [3000, 1000])
 
+def temperature_check(temperature, cel_fah):
+    if cel_fah == "F":
+        temperature = (temperature - 32) * 5/9
+
+    if 36.1 <= temperature <= 37.2:
+        print(f"The patient's temp is {temperature:.2f}°C, The patient's temp is normal")
+    elif temperature < 36.1:
+        print(f"The patient's temp is {temperature:.2f}°C, The patient is hypothermic")
+    else:
+        print(f"The patient's temp is {temperature:.2f}°C, The patient is hyperthemic")
+
+temperature_check(14, "C")
+
+temperature_check(37, "C")
+
+temperature_check(37, "F")
+
 
