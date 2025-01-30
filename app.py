@@ -12,3 +12,4 @@ temp = parallel(resistors)
 actual_tot = temp ** -1
 
 print(f"{actual_tot:.3f} ohms")
+
